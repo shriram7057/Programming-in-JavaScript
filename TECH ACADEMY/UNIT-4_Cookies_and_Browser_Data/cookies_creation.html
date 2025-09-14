@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cookies_Creation</title>
+  Enter Your City:<input type="text"id="tf1"><br><br>
+  <input type="button"name="b1"value="Create Cookie"onclick="Display1()">
+  <script lang="javaScript"type="text/javaScript">
+    function Display1()
+    {
+      var expiration_date=new Date();//get the Expiration Date 
+      expiration_date.setMonth(expiration_date.getMonth()+1);//add one Month into Current Month
+      var val=document.getElementById("tf1").value;
+      document.cookie="city"+val+";expires="+expiration_date.toUTCString()+";";
+      alert("Cookie Added Successfully!");
+    }
+  </script>
+</head>
+<body style="background-color: CYAN;">
+</body>
+</html>

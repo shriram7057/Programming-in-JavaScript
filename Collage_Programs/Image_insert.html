@@ -1,0 +1,26 @@
+<!--Insert an Image into a web page write a script which Display a message when the mouse is over in the image the cordinate 
+should be displad if click attempted on the image-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javaScript">
+        function my_fun()
+        {
+            points.innerText="Now the mouse is moving";
+        }
+        function my_fun2()
+        {
+            point.innerText=("{"+event.offsetX+"."+event.offsetX+"}");
+        }
+    </script>
+</head>
+<body onmousemove="my_fun()" onmousedown="my_fun2()">
+        <span id="point">(0.0)</span>
+        <br>
+        <br>
+        <img src="reset.jpg">   <!--to select the image-->
+</body>
+</html>

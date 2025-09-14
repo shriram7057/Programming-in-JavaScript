@@ -1,0 +1,28 @@
+<!--Get Input From Student And Display Simple BioData -->
+<html>
+  <head>
+    <title>Events</title>
+    <script language="javascript" type="text/javascript">
+      function display() {
+        var name = document.forms.VJTech.fname.value;
+        var cname = document.forms.VJTech.cname.value;
+        var branch = document.forms.VJTech.branch.value;
+        confirm("---------- Student Info ---------\n Name : " +name +"\nCollege Name : " +cname +  "\nBranch : " +     branch);
+      }
+    </script>
+  </head>
+  <body style="background-color: cyan">
+    <form name="VJTech">
+      Enter Your Name : <br />
+      <input type="text" name="fname"placeholder="Student name"required /><br /><br />
+
+      Enter College Name : <br />
+      <input type="text" name="cname" /><br /><br />
+
+      Enter Your Branch : <br />
+      <input type="text" name="branch" /><br /><br />
+
+      <input type="button" name="btn" value="Submit" onclick="display()" />
+    </form>
+  </body >
+</html>

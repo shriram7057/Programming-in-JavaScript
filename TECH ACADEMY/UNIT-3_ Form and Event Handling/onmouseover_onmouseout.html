@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Events</title>
+    <script language="javascript" type="text/javascript">
+      function mouseOvered() {
+        confirm("Mouse overed on textarea !");
+      }
+      function mouseOutes() {
+        confirm("Mouse outed from textarea !");
+      }
+    </script>
+  </head>
+  <body>
+    <textarea
+      id="textarea"
+      onmouseover="mouseOvered()"
+      onmouseout="mouseOutes()"
+      rows="10"
+    ></textarea>
+  </body>
+</html>

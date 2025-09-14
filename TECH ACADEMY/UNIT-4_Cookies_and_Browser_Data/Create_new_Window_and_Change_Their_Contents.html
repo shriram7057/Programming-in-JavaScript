@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Open New window</title>
+    <input type="button"value="New Window"onclick="OpenWindow()">
+    <script lang="javaScript"type="text/javaScript">
+        function OpenWindow()
+        {
+            newWin=window.open("https://www.google.com","Google","width=700 height=500 toolbar=yes scrollbars=yes resizable=yes");
+            newWin.document.write("<h1>Changed Contents</h1>");
+        }
+    </script>
+</head>
+<body style="background-color: cyan;">  
+</body>
+</html>

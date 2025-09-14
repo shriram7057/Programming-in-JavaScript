@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form Validation</title>
+  </head>
+  <body style="background-color: #212121; color: azure">
+    <form id="myForm">
+      <h2>Registration Form</h2>
+      <label>Name:</label>
+      <input
+
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+      /><br /><br />
+
+      <label>Phone Number:</label>
+      <input
+
+        type="text"
+        class="phone"
+        name="phone"
+        placeholder="Enter 10-digit phone number"
+      /><br /><br />
+
+      <label>Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+      /><br /><br />
+
+      <label>Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="Confirm your password"
+      /><br /><br />
+
+      <div id="errorMessage"></div>
+      <br />
+
+      <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script type="text/javaScript">
+
+      function validateForm() 
+      {
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementsByClassName("phone").value.trim();
+
+        const password = document.querySelector("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        const errorMessage = document.getElementById("errorMessage");
+        errorMessage.textContent = "";
+
+        if (name === "") 
+        {
+          errorMessage.textContent = "Name cannot be empty.";
+        } else if (phone === "")
+        {
+          errorMessage.textContent = "Phone number cannot be empty.";
+        } else if (phone.length !== 10 || isNaN(phone)) 
+        {
+          errorMessage.textContent = "Phone number must be exactly 10 digits.";
+        }
+         else if (password === "") 
+         {
+          errorMessage.textContent = "Password cannot be empty.";
+        } 
+        else if (confirmPassword === "") 
+        {
+          errorMessage.textContent = "Confirm password cannot be empty.";
+        }
+         else if (password !== confirmPassword)
+        {
+          errorMessage.textContent = "Passwords do not match.";
+        } 
+        else 
+        {
+          alert("Form submitted successfully!");
+          document.getElementById("myForm").reset(); // Reset the form
+        }
+      }
+    </script>
+  </body>
+</html>

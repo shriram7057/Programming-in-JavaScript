@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dynamically Changing Menu</title>
+    <script type="text/javascript">
+      function updateMenu(category) {
+        var menu = document.getElementById("dynamicMenu");
+        menu.innerHTML = ""; // Clear existing options
+
+        var options = [];
+
+        if (category === "fruits") {
+          options = ["Apple", "Banana", "Cherry"];
+        } else if (category === "vegetables") {
+          options = ["Carrot", "Broccoli", "Spinach"];
+        } else if (category === "drinks") {
+          options = ["Water", "Juice", "Soda"];
+        }
+
+        // Add new options to the dropdown
+        for (var i = 0; i < options.length; i++) {
+          var option = document.createElement("option");
+          option.text = options[i];
+          option.value = options[i].toLowerCase();
+          menu.add(option);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h4>Select a category to update the menu:</h4>
+    <select id="categorySelect" onchange="updateMenu(this.value)">
+      <option value="">-- Select a category --</option>
+      <option value="fruits">Fruits</option>
+      <option value="vegetables">Vegetables</option>
+      <option value="drinks">Drinks</option>
+    </select>
+
+    <h4>Dynamically Updated Menu:</h4>
+    <select id="dynamicMenu">
+      <!-- Options will be dynamically added here -->
+    </select>
+  </body>
+</html>
+<!-- To create a dynamically changing menu in JavaScript, you can modify the contents of a menu (such as a dropdown list
+ or navigation menu) based on user actions like clicking a button, selecting a checkbox, or choosing an option from
+  another dropdown. Here's a basic example that demonstrates how to dynamically update a dropdown menu based on user
+   selection: -->

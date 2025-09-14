@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frameset Example</title>
+</head>
+<body>
+
+<frameset rows="50%,50%" id="myFrameset">
+    <iframe src="frame4.html" name="frame4">
+    <iframe src="frame5.html" name="frame5">
+</frameset>
+
+<script type="text/javascript">
+    var frameset = document.getElementById('myFrameset');
+    frameset.setAttribute('rows', '30%,70%');
+    document.write('Rows: ' + frameset.getAttribute('rows'));
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>All Operations on Cookies!</title>
+</head>
+<body style="background-color: cyan;">
+    <input type="text" id="tf1" placeholder="Enter Key"><br><br>
+    <input type="text" id="tf2" placeholder="Enter Value"><br><br>
+    <input type="button" id="b1" value="Create Cookie" onclick="Create_Cookie()">
+    <input type="button" id="b2" value="Read Cookie" onclick="Read_Cookie()">
+    <input type="button" id="b1" value="Update Cookie" onclick="Update_Cookie()">
+    <input type="button" id="b1" value="Delete Cookie" onclick="Delete_Cookie()">
+
+    <hr>
+    Your Cookies: <p id="p1"></p>
+</hr>
+    <script lang="javascript" type="text/javascript">
+        function Create_Cookie() {
+            var key = document.getElementById("tf1").value;
+            var value = document.getElementById("tf2").value;
+            document.cookie = key + "=" + value + "; expires=Thu, 03 Oct 2024 12:00:00 UTC; path=/";
+            confirm("Cookie Created Successfully!");
+        }
+
+        function Read_Cookie() {
+            var x = document.cookie;
+            document.getElementById("p1").innerHTML = x;
+        }
+        function Update_Cookie() {
+            var key = document.getElementById("tf1").value;
+            var value = document.getElementById("tf2").value;
+            document.cookie = key + "=" + value + "; expires=Thu, 03 Oct 2020 12:00:00 UTC; path=/";
+            confirm("Cookie Updated Successfully!");
+        }
+        function Delete_Cookie() {
+            var key = document.getElementById("tf1").value;
+            var value = document.getElementById("tf2").value;
+            document.cookie = key + "=" + value + "; expires=Thu, 03 Oct 1980 12:00:00 UTC; path=/";
+            confirm("Cookie Deleted Successfully!");
+        }
+    </script>
+</body>
+</html>
+</html>

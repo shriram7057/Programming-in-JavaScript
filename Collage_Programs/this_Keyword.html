@@ -1,0 +1,25 @@
+<!--Changing attribute value dynamically 
+this ketword use to refer the current object this is not a variable its a keyword we cannot the value of this-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+    <script lang="javaScript"type="text/javaScript">
+        function ChangeMe(Ele)
+        {
+            Ele.style.background='pink'
+        }
+    </script>
+</head>
+<body>
+        <form name="MyForm">
+            Enter RollNo:<input type="text"name="RollNo"onchange="ChangeMe(this)
+            <br><br>
+            Enter Name:<input type="text" name="name" onchange="ChangeMe(this)
+
+            <input type="submit" value="Submit">
+        </form>
+</body>
+</html>

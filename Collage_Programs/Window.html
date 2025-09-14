@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parent Window with Frames</title>
+</head>
+<body>
+    <h1>Parent Window with Two Frames</h1>
+
+    <iframe id="frame1" src="about:blank" style="width: 45%; height: 300px; border: 1px solid rgb(4, 5, 5)"></iframe>
+    <iframe id="frame2" src="about:blank" style="width: 45%; height: 300px; border: 1px solid rgb(0, 0, 0)"></iframe>
+
+    <script>
+        // Setting content for frame1
+        var frame1 = document.getElementById('frame1').contentWindow.document;
+        frame1.open();
+        frame1.write("<h2>Content of Frame 1</h2><p>This is the first frame.</p>");
+        frame1.close();
+
+        // Setting content for frame2
+        var frame2 = document.getElementById('frame2').contentWindow.document;
+        frame2.open();
+        frame2.write("<h2>Content of Frame 2</h2><p>This is the second frame.</p>");
+        frame2.close();
+    </script>
+</body>
+</html>

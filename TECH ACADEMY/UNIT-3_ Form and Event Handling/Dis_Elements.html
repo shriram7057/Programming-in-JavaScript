@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Disabling Elements </title>
+    <script type="text/javaScript">
+        function EnableFunction()
+        {
+            document.forms.myform.name.disabled=false
+        }
+        function  DisableFunction()
+        {
+            document.forms.myform.name.disabled=true
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        Username:<input type="text"  name="name"/> 
+        <br/> <br/> 
+           <input type="button" value="Disable Name Field" onclick=" DisableFunction()"/> 
+         <br/><br/> 
+                     <input type="button"  value="Enable  Name Field" onclick=" EnableFunction()"/>
+    </form>
+</body>
+</html>
+<!-- If disabled property of particular form elements is set true then user can not edit that element. 
+Similarly on setting disabled property to false we can edit the field. -->

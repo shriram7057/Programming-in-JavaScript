@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Events</title>
+    <script language="javascript" type="text/javascript">
+      function keyDownEvent() {
+        document.eventForm.btn.value = "Current Event : Key Down";
+        console.log("Key Down");
+      }
+
+      function keyPressEvent() {
+        document.eventForm.btn.value = "Current Event : Key Press";
+        console.log("Key Press");
+      }
+
+      function keyUpEvent() {
+        document.eventForm.btn.value = "Current Event : Key Up";
+        console.log("Key Up");
+      }
+    </script>
+  </head>
+  <body>
+    <form name="eventForm">
+      <input
+        type="text"
+        name="name"
+        onkeydown="keyDownEvent()"
+        onkeypress="keyPressEvent()"
+        onkeyup="keyUpEvent()"
+      />
+      <input type="button" name="btn" value="Current Event : None" />
+    </form>
+  </body>
+</html>

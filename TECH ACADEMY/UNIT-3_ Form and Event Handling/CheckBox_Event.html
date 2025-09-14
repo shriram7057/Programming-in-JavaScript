@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CheckBox Event</title>
+    <form name="my Form">
+      Select Your Favorite Coding Language:<br />
+      <input type="checkbox" id="c1" value="C Language" onchange="Highlightcheckbox(this)"/>C Language
+      <input type="checkbox" id="c2" value="C++ Language" />C++ Language
+      <input type="checkbox" id="c3" value="Java Language" />Java Language
+      <input type="checkbox" id="c4" value="Python Language" />Python Language
+      <input type="checkbox" id="c5" value=" CSSLanguage" />CSS Language
+      <br />
+      <input type="button" id="b1" value="Submit" onclick="Display()" />
+    </form>
+    <script lang="javaScript" type="text/javaScript">
+      function Display()
+      {
+          var result="You have selected Language"
+            if(document.getElementById("c1").checked)
+        {
+            result=result+document.getElementById("c1").value+"\n"
+        }
+        if(document.getElementById("c2").checked)
+        {
+            result=result+document.getElementById("c2").value+"\n"
+        }   if(document.getElementById("c3").checked)
+        {
+            result=result+document.getElementById("c3").value+"\n"
+        }   if(document.getElementById("c4").checked)
+        {
+            result=result+document.getElementById("c4").value+"\n"
+        }   if(document.getElementById("c5").checked)
+        {
+            result=result+document.getElementById("c5").value+"\n"
+        }
+        confirm(result);
+      }
+    </script>
+  </head>
+  <body style="background-color: cyan"></body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>finding non-matching charactors in text</title>
+    <script lang="javaScript"type="text/javaScript">
+        function Display()
+        {
+            var text=document.getElementById("tf1").value;
+            var pattern=/[^a-z]/gmi;
+            var result=text.match(pattern);
+            document.write("<br>Non Matching Charactors="+result);
+        }
+    </script>
+</head>
+<body>
+    Enter Your Text<br>
+    <input type="text"id="tf1">
+    <input type="button"name="b1"value="Find Non Matching Charactors"onclick="Display()">
+</body>
+</html>

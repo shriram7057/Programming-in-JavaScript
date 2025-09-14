@@ -1,0 +1,21 @@
+<!-- Changing Elements Content Using innerHTML-->
+<html>
+  <head>
+    <title>innerHTML Demo</title>
+    <script language="javascript" type="text/javascript">
+              function display() 
+              {
+                  var name = document.getElementById("fname").value;
+                  document.getElementById("studentName").innerHTML = "Your Name Is : " + name;
+              }
+    </script>
+  </head>
+  <body style="background-color: aqua;">
+    <form name="VJTech">
+      Enter Your Name : <br />
+      <input type="text" name="fname" id="fname" /><br /><br />
+      <input type="button" name="btn" value="Submit" onclick="display()" />
+    </form>
+    <label id="studentName">Your Name Is :</label>
+  </body>
+</html>

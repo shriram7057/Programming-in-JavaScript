@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Number Square and Cube</title>
+    <script type="text/javascript" lang="javascript">
+      function generateTable() {
+        let table = "<table border='1' cellpadding='10'>";
+
+        table += "<tr><th>Number</th><th>Square</th><th>Cube</th></tr>";
+
+        for (let i = 1; i <= 10; i++) {
+          table += "<tr>";
+          table += "<td>" + i + "</td>"; // Number
+          table += "<td>" + i * i + "</td>"; // Square
+          table += "<td>" + i * i * i + "</td>"; // Cube
+          table += "</tr>";
+        }
+
+        table += "</table>";
+
+        document.getElementById("result").innerHTML = table;
+      }
+    </script>
+  </head>
+  <body onload="generateTable()">
+    <h2>Numbers, Squares, and Cubes</h2>
+    <div id="result"></div>
+  </body>
+</html>

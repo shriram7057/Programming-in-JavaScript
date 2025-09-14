@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Array Deletion</title>
+       <script language="javascript" type="text/javascript">
+              var a=new Array(10);
+              var N=parseInt(prompt("How much element wants to store on Array:"));
+              for(i=0;i<N;i++)
+              {
+              a[i]=parseInt(prompt("Enter Array Element:"+i));
+              }
+      
+              document.write("<h1>Array Elements before deletion:");
+              for(i=0;i<N;i++)
+              {
+              document.write(a[i]+"\t");
+              }
+      
+              var Loc=parseInt(prompt("Enter location for deletion:"));
+              for(i=Loc-1;i<N-1;i++)
+              {          
+              a[i]=a[i+1];
+              }
+              N--;
+      
+              document.write("<h1>Array Elements after deletion:");
+              for(i=0;i<N;i++)
+              {
+              document.write(a[i]+"\t");
+              }
+       </script>
+</head>
+<body>
+       
+</body>
+</html>

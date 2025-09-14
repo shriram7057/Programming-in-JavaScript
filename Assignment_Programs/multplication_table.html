@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    Number: <input type="number" id="number"><br><br>
+    Range: <input type="number" id="range"><br><br>
+    <button onclick="showTable()">Show Table</button>
+
+    <h2>Table:</h2>
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        function showTable() {
+            const num = document.getElementById('number').value;
+            const range = document.getElementById('range').value;
+            let result = '';
+
+            for (let i = 1; i <= range; i++) 
+            {
+                result += num + ' x ' + i + ' = ' + (num * i) + '<br>';
+            }
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

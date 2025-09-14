@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Open New Window And Close it</title>
+    <input type="button"value="New Window"onclick="OpenWindow()">
+    <script lang="javaScript"type="text/javaScript">
+        function OpenWindow()
+        {
+            newWin=window.open("","vjtech","width=500 height=500");
+            newWin.document.write("<h1>This is New Window!</h1>");
+            newWin.document.write("<input type='button'value='Close Window'onclick='window.close()'>");
+        }
+    </script>
+</head>
+<body style="background-color: cyan;">  
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sum of Natural Numbers</title>
+    <script type="text/javascript" lang="javascript">
+        function calculateSum() 
+        {
+            const n = parseInt(document.getElementById("numberInput").value);
+            let sum = 0;
+
+            if (isNaN(n) || n <= 0) {
+                document.getElementById("result").textContent = "Please enter a positive integer.";
+                return;
+            }
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            document.getElementById("result").textContent = `The sum of natural numbers up to ${n} is ${sum}.`;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Sum of Natural Numbers</h2>
+    <input type="number" id="numberInput" placeholder="Enter a positive integer">
+    <button onclick="calculateSum()">Calculate</button>
+
+    <p id="result"></p>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!--Changing option list dynamically->
+option List Represent The List of One or more than one mite which can be chosen by the user
+in a web application it is common practice to change the content of the option List based on some option category 
+that means javascript allows to change the item present in the list dinamically
+
+Q)write a javascript to create categoryes Fruit Flower an color Based on the selection category the item in the selection
+category must get change-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Changing option list dynamically</title>
+    <script lang="javascript"type="text/javascript">
+        function MySelection(val)
+        {
+            with(document.forms.myform)
+            {
+                if(val==1)
+            {
+                choices[0].text="mango"
+                choices[0].value=1
+                choices[1].text="orange"
+                choices[1].value=2
+                choices[2].text="Banana"
+                choices[2].value=3
+            }
+            if(val==2)
+            {
+                choices[0].text="rose"
+                choices[0].value=1
+                choices[1].text="jasmin"
+                choices[1].value=2
+                choices[2].text="lotus"
+                choices[2].value=3
+            }
+            if(val==3)
+            {
+                choices[0].text="red"
+                choices[0].value=1
+                choices[1].text="green"
+                choices[1].value=2
+                choices[2].text="blue"
+                choices[2].value=3
+
+            }
+            }
+        }
+    </script>
+</head>
+<body style="background-color:cyan">
+    <h4>select the desired category</h4>
+    <form name="myform">
+        <input type="radio"name="items"checked="true"value=1
+        onclick="MySelection(this.value)">fruit
+
+        <input type="radio"name="items"checked="true"value=2
+        onclick="MySelection(this.value)">flower
+
+        <input type="radio"name="items"checked="false"value=3
+        onclick="MySelection(this.value)">color
+        <br/></br>
+        <select name="choices">
+            <option value=1>mango</option>
+            <option value=2>orange</option>
+            <option value=3>Banana</option>
+        </select>
+    </form> 
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Closures</title>
+    <script type="text/javaScript">
+        function greet(name) 
+        {
+            return function() //inner Function
+            {
+                document.write("Hello"+name);    
+            }    
+        }
+        const greetShriram=greet("Shriram");//creates a closure with name shriram   greetshriram is a variable name here
+        greetShriram();//call the function
+    </script>
+</head>
+<body>
+    <!-- output will be Hello shriram  -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Basic styles for the frame */
+        #frame {
+            border: 2px solid cyan;
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px red(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="frame-container"></div>
+
+    <script>
+        // JavaScript to create a frame dynamically
+        function createFrame() {
+            // Create a new div element
+            var frame = document.createElement("div");
+            
+            // Assign an ID to the div
+            frame.id = "frame";
+
+            // Set content inside the frame
+            frame.innerHTML = "<h2>This is a Frame</h2><p>Created using JavaScript</p>";
+
+            // Add the frame to the container
+            document.getElementById("frame-container").appendChild(frame);
+        }
+
+        // Call the function to create the frame
+        createFrame();
+    </script>
+</body>
+</html>

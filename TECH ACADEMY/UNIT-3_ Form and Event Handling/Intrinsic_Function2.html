@@ -1,0 +1,51 @@
+<!-- Changing Option Element Dynamically-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intrinsic Function</title>
+    <form name="VJTECH">
+         List of Programming Languages:<br>
+        <select name="s"size="3">
+            <option value="1">C Language</option>
+            <option value="2">Cobol Language</option>
+            <option value="3">Pascal Language</option>
+            <option value="4">Forton Language</option>
+        </select>
+        <br><br>
+        <input type="radio"name="r1"id="id1" checked onclick="UpdateList()">POP
+        <input type="radio"name="r1"id="id2"checked onclick="UpdateList()">OOP
+    </form>
+    <script lang="javascript"type="text/javascript">
+        function UpdateList()
+        {
+            if(document.getElementById("id1").checked)
+        {
+            document.forms.VJTECH.s[0].text="C Lang";
+            document.forms.VJTECH.s[0].value="1";
+            document.forms.VJTECH.s[1].text="Cobol Lang";
+            document.forms.VJTECH.s[1].value="2";
+            document.forms.VJTECH.s[2].text="C Lang";
+            document.forms.VJTECH.s[2].value="3";
+            document.forms.VJTECH.s[3].text="C Lang";
+            document.forms.VJTECH.s[3].value="4";
+        }
+        else
+        {
+            document.forms.VJTECH.s[0].text="C++ Lang";
+            document.forms.VJTECH.s[0].value="1";
+            document.forms.VJTECH.s[1].text="java Lang";
+            document.forms.VJTECH.s[1].value="2";
+            document.forms.VJTECH.s[2].text="Python Lang";
+            document.forms.VJTECH.s[2].value="3";
+            document.forms.VJTECH.s[3].text="Javascript Lang";
+            document.forms.VJTECH.s[3].value="4";
+        }
+        }
+    </script>
+</head>
+<body style="background-color: cyan;">
+    
+</body>
+</html>

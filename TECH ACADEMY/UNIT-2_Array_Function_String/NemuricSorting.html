@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script lang="text/javascript">
+            var a=new Array(100,20,50,40,67,30);
+            document.write("<br>Original array="+a);
+
+           a.sort();//add the array element at last position
+           document.write("<br><br>Array Elements After Sorting="+a);
+
+//when we want to correct the output then use following logic for sort the array elements in ascending order
+
+          a.sort(function(a,b){return a-b});
+          document.write("<br><br>Array Elements After Sorting in ascending order="+a);
+
+//when we want to  sort the array elements in descending order then use following logic
+            a.sort(function(a,b){return b-a});
+            document.write("<br><br>Array Elements in descending order="+a);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>finding matching digits</title>
+    <script lang="javaScript"type="text/javaScript">
+        function Display()
+        {
+            var text=document.getElementById("tf1").value;
+            var pattern=/[0-9]/gmi;//check only digits 
+            var result=pattern.test(text);
+           if(result)
+           {
+            document.write("digits matched!");
+           }
+           else
+           {
+            document.write("digits are non matched!");
+           }
+        }
+    </script>
+</head>
+<body style="background-color: cyan;">
+    Enter Your Text<br>
+    <input type="text"id="tf1">
+    <input type="button"name="b1"value="Find Non Matching Charactors"onclick="Display()">
+</body>
+</html>

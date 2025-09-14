@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Current Date</title>
+  </head>
+  <body>
+    <h1>Current Date</h1>
+    <p id="date"></p>
+
+    <script type="text/javascript">
+      var  currentDate = new Date();// returns the current date an time!
+      document.getElementById("date").innerHTML = currentDate.toDateString();
+    </script>
+  </body>
+</html> 

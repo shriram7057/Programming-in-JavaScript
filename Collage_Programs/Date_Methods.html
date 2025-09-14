@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Date All Methods</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var date = new Date();
+
+      // Current date components
+      document.write("Current Date = " + date.getDate() + "<br>");
+      document.write("Current Day = " + date.getDay() + "<br>");
+      document.write("Current Month = " + date.getMonth() + "<br>");
+      document.write("Current Year = " + date.getFullYear() + "<br>");
+    //   document.write("Current Hours = " + date.getHours() + "<br>");
+      document.write("Current Minutes = " + date.getMinutes() + "<br>");
+      document.write("Current Seconds = " + date.getSeconds() + "<br>");
+      document.write(
+        "Current Milliseconds = " + date.getMilliseconds() + "<br>"
+      );
+
+      // UTC date components
+      document.write("UTC Date = " + date.getUTCDate() + "<br>");
+      document.write("UTC Day = " + date.getUTCDay() + "<br>");
+      document.write("UTC Month = " + date.getUTCMonth() + "<br>");
+      document.write("UTC Year = " + date.getUTCFullYear() + "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+JavaScript Array Methods 
+ 
+find()  It returns the value of the first element in the given array that satisfies the specified 
+condition. 
+findIndex() It returns the index value of the first element in the given array that satisfies the 
+specified condition. 
+indexOf() It searches the specified element in the given array and returns the index of the first 
+match. 
+lastIndexOf() It searches the specified element in the given array and returns the index of the last 
+match. 
+pop()  It removes and returns the last element of an array. 
+push()  It adds one or more elements to the end of an array. 
+reverse() It reverses the elements of given array. 
+shift()  It removes and returns the first element of an array. 
+sort()  It returns the element of the given array in a sorted order.

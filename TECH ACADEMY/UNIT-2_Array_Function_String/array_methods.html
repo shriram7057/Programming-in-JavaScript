@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script type="Text/javaScript">
+           var items=new Array("One","Two","three","four");
+           document.write("<br><br>Original Array="+items);
+
+           var s1=items.join('-');//join the array elements
+           document.write("<br><br>String s1="+s1);
+
+           var s2=items.concat();//saperate the array elements using comma
+           document.write("<br><br>String s2="+s2);
+
+           //we can concat the array elements in other way 
+            var s3=items.concat("five","six","seven");
+            document.write("<br>String s3="+s3);
+
+            //The Slice method is use to retrive the array elements we specify the index of the aray element in slice method
+            var num=new Array(10,20,30,40,50,60);
+            document.write("<br><br><br>Slice Method Array Elements="+num.slice(1,3));
+            //here the third index position array element is 40 but the slice method contain index-1 so 3rd index position array element is 30
+
+        </script>
+    </body>
+</html>
